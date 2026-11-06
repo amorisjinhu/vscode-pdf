@@ -55,11 +55,15 @@ export class PDFViewerProvider implements CustomReadonlyEditorProvider {
   static readonly viewType = "pdf.view";
 
   static register(context: ExtensionContext) {
+    const retainContextWhenHidden = workspace
+      .getConfiguration("pdf")
+      .get<boolean>("retainContextWhenHidden", true);
     return window.registerCustomEditorProvider(
       PDFViewerProvider.viewType,
       new PDFViewerProvider(context),
       {
         supportsMultipleEditorsPerDocument: false,
+        webviewOptions: { retainContextWhenHidden },
       },
     );
   }

@@ -24,6 +24,14 @@ Alternatively, search for **"PDF Viewer"** in the Extensions view (`Ctrl+Shift+X
 
 Once installed, open any `.pdf` file in VS Code. The extension automatically registers as the default editor for PDF files and renders them using the built-in PDF.js viewer.
 
+## Settings
+
+- `pdf.defaultZoomValue` (default: `"auto"`): default zoom level when opening a PDF.
+- `pdf.sidebarViewOnLoad` (default: `0`): sidebar panel to show when opening a PDF.
+- `pdf.retainContextWhenHidden` (default: `true`): keep the viewer loaded when its
+  tab is hidden so switching back does not reload the document or lose the scroll
+  position. Requires a window reload to take effect.
+
 ## Contributing
 
 Start with a [Discussion](https://github.com/mathematic-inc/vscode-pdf/discussions/new), not a pull request. A
