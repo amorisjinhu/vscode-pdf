@@ -1,8 +1,5 @@
 [files]
-yaml = [
-  "*.yaml",
-  "*.yml",
-]
+yaml = ["*.yaml", "*.yml"]
 
 [lint.rules]
 anchors = "enable"

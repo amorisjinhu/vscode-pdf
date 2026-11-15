@@ -60,6 +60,9 @@ export class PDFViewerProvider implements CustomReadonlyEditorProvider {
       new PDFViewerProvider(context),
       {
         supportsMultipleEditorsPerDocument: false,
+        // Keep the webview context alive when the tab is hidden, so switching
+        // back does not re-fetch and re-render the PDF from scratch.
+        webviewOptions: { retainContextWhenHidden: true },
       },
     );
   }

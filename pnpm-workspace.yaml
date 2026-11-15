@@ -1,3 +1,6 @@
+# Windows 上 pnpm 默认用 cmd 跑生命周期脚本，本仓库的 prepare 等脚本是 bash 语法。
+scriptShell: 'C:\Program Files\Git\bin\bash.exe'
+verifyDepsBeforeRun: false
 allowBuilds:
   "@vscode/vsce-sign": true
   esbuild: true
